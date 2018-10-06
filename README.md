@@ -4,6 +4,12 @@ As a user
 In order to stay in touch with my friends
 I would like to be able to create a contact for them in my address book
 
+# Questions
+
+*   And we apply some styles to make that card look nice. And take special note that we     apply styles specifically to each component in Angular. can you think of any reason      why that is?
+Like when we were using haml, applying styling to each section doesn't break anything further down the line. 
+
+
 # AddressBookAngular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.4.
