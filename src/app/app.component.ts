@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'address-book-angular';
+  createNewContact() {
+    console.log('Something clicked me!!!')
+  }
 }
