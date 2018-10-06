@@ -16,13 +16,13 @@ describe('workspace-project App', () => {
     let count = page.cardCount();
     expect(count).toBe(0);
 
-    page.getField('name').sendKeys('John Doe');
-    page.getField('email').sendKeys('john@craftacademy.se');
-    page.getField('company').sendKeys('Craft Academy');
-    page.getField('role').sendKeys('Tester');
-    page.getField('twitter').sendKeys('@tester');
-    page.getField('location').sendKeys('Gothenburg');
-    page.getField('notes').sendKeys('Some tester guy');
+    page.getField('name').sendKeys('Tom Hardy');
+    page.getField('email').sendKeys('tom@hardy.com');
+    page.getField('company').sendKeys('Paramount Pictures');
+    page.getField('role').sendKeys('Lead Actor');
+    page.getField('twitter').sendKeys('@Tom__Hardy_');
+    page.getField('location').sendKeys('London');
+    page.getField('notes').sendKeys('Favourite actor');
 
     page.getSubmitButton().click();
 
