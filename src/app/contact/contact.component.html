@@ -11,3 +11,7 @@
       <a href="https://www.twitter.com/{{ contact.twitter }}">@{{ contact.twitter }}</a>
   </div>
 </div> 
+
+<ng-container class="container" *ngFor="let c of contacts">
+  <app-contact [contact]="c"></app-contact>
+</ng-container>
