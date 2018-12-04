@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   contact: any
   contacts: any[] = [];
+  title = 'Address Book Challenge'
 
   constructor() {
     this.initContact();
