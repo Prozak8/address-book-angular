@@ -3,33 +3,36 @@
     Welcome to the {{ title }}!
   </h2>
   <div class="container max-w-lg mx-6">
-      <form class="bg-white shadow-md w-full max-w-md px-8 pt-6 pb-8 mb-4">
-        <h1>Create contact</h1>
-        <div class="flex flex-wrap -mx-3 mb-6">
-          <div class="w-full px-3">
-            <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="name">
-              Name
-            </label>
+    <form class="bg-white shadow-md w-full max-w-md px-8 pt-6 pb-8 mb-4">
+      <h1>Create contact</h1>
+      <div class="flex flex-wrap -mx-3 mb-6">
+        <div class="w-full px-3">
+          <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="name">
+            Name
+          </label>
             <input [(ngModel)]="contact.name" class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3"
               id="name" type="text" name="name" placeholder="John Doe">
-          </div>
         </div>
-        <div class="flex flex-wrap -mx-3 mb-6">
-          <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-            <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-email">
-              Email
-            </label>
-            <input [(ngModel)]="contact.email" class="appearance-none block w-full bg-grey-lighter text-grey-darker border rounded py-3 px-4 mb-3" id="grid-email"
-              id="grid-email" type="email" name="email" placeholder="yo@company.com">
-          </div>
-          <div class="w-full md:w-1/2 px-3">
-            <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-email">
-              Company
-            </label>
-            <input [(ngModel)]="contact.company" class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4"
-              id="grid-email" type="text" name="company" placeholder="Awesome company">
-          </div>
+      </div>
+
+      <div class="flex flex-wrap -mx-3 mb-6">
+        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+          <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-email">
+            Email
+          </label>
+          <input [(ngModel)]="contact.email" class="appearance-none block w-full bg-grey-lighter text-grey-darker border rounded py-3 px-4 mb-3" id="grid-email"
+            id="grid-email" type="email" name="email" placeholder="yo@company.com">
         </div>
+
+        <div class="w-full md:w-1/2 px-3">
+          <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-email">
+            Company
+          </label>
+          <input [(ngModel)]="contact.company" class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4"
+            id="grid-email" type="text" name="company" placeholder="Awesome company">
+        </div>
+      </div>
+      
         <div class="flex flex-wrap -mx-3 mb-6">
           <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
             <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-role">
@@ -38,6 +41,7 @@
             <input [(ngModel)]="contact.role" class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4"
               id="grid-role" type="text" name="role" placeholder="Pure Genius">
           </div>
+
           <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
             <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-twitter">
               Twitter
@@ -45,6 +49,7 @@
             <input [(ngModel)]="contact.twitter" class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4"
               id="grid-twitter" type="text" name="twitter" placeholder="johndoe">
           </div>
+
           <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
             <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-location">
               Location
@@ -53,6 +58,7 @@
               id="grid-location" type="text" name="location" placeholder="Pretoria">
           </div>
         </div>
+
         <div class="flex flex-wrap -mx-3 mb-2">
           <div class="w-full px-3">
             <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-notes">
@@ -68,11 +74,12 @@
             Submit
           </button>
         </div>
+
       </form>
     </div>
     <pre>
       <ng-container class="container" *ngFor="let contact of contacts">
-        <app-contact></app-contact>
+        <app-contact [contact]="contact"></app-contact>
       </ng-container>
     </pre>
 

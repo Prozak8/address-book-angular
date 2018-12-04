@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  contact: any
+  contact: any;
   contacts: any[] = [];
   title = 'Address Book Challenge'
 
@@ -15,6 +15,7 @@ export class AppComponent {
   }
 
   createNewContact() {
+    debugger;
     console.log(`Creating the following contact: ${JSON.stringify(this.contact)}`);
     this.contacts.push(this.contact);
     this.initContact();

@@ -1,7 +1,7 @@
 .card {
   width: 30%;
   float: left;
-  margin: 6px;
+  margin: auto;
   position: relative;
   z-index: 1;
   display: block;
